@@ -1,0 +1,15 @@
+#!/usr/local/bin/perl -w
+use strict;
+#-------------------------------------------------------------------------
+# Count in binary up to a user specified decimal value
+#-------------------------------------------------------------------------
+
+if (scalar(@ARGV) < 1) {
+  die "Please enter the integer to which you wish to count.\n";
+}
+my $limit = $ARGV[0];
+
+for (my $i=0; $i <= $limit; $i++) {
+  my $binary = sprintf("%08b", $i);
+  print "$binary\n";
+}
